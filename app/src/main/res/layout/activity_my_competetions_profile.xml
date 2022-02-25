@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".my_competetions_profile">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#2873f0">
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/trophy"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Competetions"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleV_my_Compe"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"/>
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/Progressbar_MCP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="#4B87E8"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/NOComptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Registered Competition :("
+            android:textColor="#737373"
+            android:visibility="gone"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+           />
+    </FrameLayout>
+
+
+
+</LinearLayout>

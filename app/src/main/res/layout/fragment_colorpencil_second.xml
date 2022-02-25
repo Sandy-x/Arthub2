@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    tools:context=".colorpencil_fragments.colorpencil_second">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleV_colorpencilfragsecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progressbarSecondCP"
+        android:layout_width="wrap_content"
+        app:SpinKit_Style="ThreeBounce"
+        app:SpinKit_Color="#4E88E6"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/TextpopupCP"
+        android:layout_width="wrap_content"
+        android:textColor="#BBDEFB"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="Not registered yet!,\nRegister now from Ongoing \nCompetition."
+        android:layout_gravity="center"/>
+
+</FrameLayout>

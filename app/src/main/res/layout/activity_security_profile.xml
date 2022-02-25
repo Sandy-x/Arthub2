@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Security_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#2873f0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Password"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a new password for your Arthub account below."
+        android:textColor="#373737"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="15dp"
+       android:orientation="vertical">
+       <androidx.appcompat.widget.AppCompatEditText
+           android:id="@+id/old_pass"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:hint="Old Password"
+           android:textColor="@color/statusbar"
+           android:padding="8dp"
+           android:layout_marginTop="15dp"
+           android:textColorHint="#A6A6A6"
+           android:background="@drawable/changepassbackground"/>
+       <androidx.appcompat.widget.AppCompatEditText
+           android:id="@+id/new_pass"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:hint="New Password"
+           android:padding="8dp"
+           android:textColor="@color/statusbar"
+           android:layout_marginTop="15dp"
+           android:textColorHint="#A6A6A6"
+           android:background="@drawable/changepassbackground"/>
+       <androidx.appcompat.widget.AppCompatEditText
+           android:id="@+id/new_passConfirm"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:hint="Confirm New Password"
+           android:padding="8dp"
+           android:textColor="@color/statusbar"
+           android:layout_marginTop="15dp"
+           android:textColorHint="#A6A6A6"
+           android:background="@drawable/changepassbackground"/>
+       <TextView
+           android:id="@+id/old_passerrortxt"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="8dp"
+           android:visibility="gone"
+           android:textColor="#EF7977"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/changepass_btn"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:background="#5262C5"
+           android:layout_marginTop="20dp"
+           android:text="Change Password"
+           android:textSize="17dp"
+           android:textColor="@color/white"/>
+
+   </LinearLayout>
+
+</LinearLayout>

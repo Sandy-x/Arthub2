@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Feedback_profile">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2873f0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feedback"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edittextfeedback"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:inputType="textMultiLine"
+            android:hint="Write feedback..."
+            android:textColorHint="#C0C0C1"
+            android:textColor="#666667"
+            android:padding="8dp"
+            android:background="@drawable/changepassbackground"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendfeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="#808EDF"
+            android:textColor="@color/white"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:text="Send"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+</LinearLayout>

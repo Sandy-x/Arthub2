@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".UploadimageMA">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/upload_imagebtnUIMA"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="200dp"
+        android:background="#4DA8F8"
+        android:text="select image"
+        android:drawableLeft="@drawable/ic_baseline_add_a_photo_24"
+        android:drawablePadding="5dp"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:clickable="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/statusbar"
+        android:layout_marginLeft="5dp"
+        android:text="(Ignore if image uploaded already..)"/>
+
+
+
+    <ImageView
+        android:id="@+id/uploadedimg_UIMA"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/participatedada_btnUIMA"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#1dbf72"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/textViewpnMA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.1"
+            android:text="Upload image"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_tbMA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

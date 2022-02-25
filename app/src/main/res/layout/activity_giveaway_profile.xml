@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".giveaway_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2873f0">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giveaway"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleV_giveaway"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"/>
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/Progressbar_MOP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/NOorderstext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO GIVEAWAY AVAILABLE RIGHT NOW"
+            android:textColor="#A6A6A6"
+            android:textSize="19sp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

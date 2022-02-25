@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".WithdrawActivityNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#2873f0">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="INR Withdrawal"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/background_gradient"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/rupeeblack"/>
+            <TextView
+                android:id="@+id/wallet_moneyWA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Curent Balance"
+            android:textColor="#A4A4A5"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#535353"
+            android:text="Money would be deposited in the following bank account (within 2-3 days)."
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="1dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            style="@style/customTextinput"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#039BE5"
+            android:hint="ACCOUNT NO.">
+            <EditText
+                android:id="@+id/accountno_WA"
+                android:layout_width="match_parent"
+                android:maxLength="11"
+                android:inputType="number"
+                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#474747"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            style="@style/customTextinput"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#039BE5"
+            android:hint="IFSC CODE">
+            <EditText
+                android:id="@+id/ifsccode_WA"
+                android:layout_width="match_parent"
+                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#474747"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            style="@style/customTextinput"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#039BE5"
+            android:hint="ACCOUNT TYPE">
+            <EditText
+                android:id="@+id/accountype_WA"
+                android:layout_width="match_parent"
+                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#474747"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            style="@style/customTextinput"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#039BE5"
+            android:hint="ACCOUNT NAME">
+            <EditText
+                android:id="@+id/accountname_WA"
+                android:layout_width="match_parent"
+                android:drawablePadding="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="#474747"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/enteramount_WA"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bgdash"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Enter Amount"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="#515151"
+            android:textColorHint="#C3C1C1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/withdrawbtn_WA"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@color/blue"
+            android:clickable="true"
+            android:text="Withdraw"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/enteramount_WA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toEndOf="@+id/enteramount_WA"
+            app:layout_constraintTop_toTopOf="@+id/enteramount_WA"
+            app:layout_constraintVertical_bias="0.466" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:text="ENTER THE AMOUNT YOU WISH TO WITHDRAW"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/enteramount_WA"
+            app:layout_constraintEnd_toEndOf="@+id/enteramount_WA"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/enteramount_WA" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrders">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="*Project Details"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="11dp"
+                    android:text="Category :"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_type"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="#8C8C8C"
+                    android:textColor="@android:color/white"
+                    />
+
+            </LinearLayout>
+            <Spinner
+                android:id="@+id/ammount_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                style="@android:style/Widget.Spinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:popupBackground="#8C8C8C"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="10dp"
+                android:spinnerMode="dropdown" />
+            <Spinner
+                android:id="@+id/ammount_type2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                style="@android:style/Widget.Spinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:popupBackground="#8C8C8C"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="10dp"
+                android:spinnerMode="dropdown" />
+            <TextView
+                android:id="@+id/noofperson"
+                android:visibility="gone"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/statusbar"/>
+
+            <Spinner
+                android:id="@+id/paper_size"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                style="@android:style/Widget.Spinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:popupBackground="#8C8C8C"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="10dp"
+                android:spinnerMode="dropdown" />
+            <LinearLayout
+                android:id="@+id/checkframelinear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/checkbox_frame"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Include Frame"/>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/desc_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Description(About your project..)"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/upload_imagebtndashb"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="#1E88E5"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_add_a_photo_24"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Select Image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="(Add reference photo)"
+                android:textColor="#808080" />
+
+            <ImageView
+                android:id="@+id/uploadedimg_dashb"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="180dp"
+                android:layout_marginTop="4dp"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/statusbar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="*Personal Details"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/firstname_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lastname_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phoneno_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Phone No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="0"
+                android:id="@+id/imageurl"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/whatsappphoneno_dashb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bgdash"
+                android:drawableStart="@drawable/ic_iconmonstr_whatsapp_1"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:hint="Whatsapp no."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:textColor="#5C5C5C"
+                android:textColorHint="#C3C1C1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/statusbar" />
+
+            <LinearLayout
+                android:id="@+id/linearaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*Address"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/addressline1_dashb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bgdash"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="Address line 1"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7C7979" />
+
+                <EditText
+                    android:id="@+id/addressline2_dashb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bgdash"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="Address line 2"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7C7979" />
+
+                <EditText
+                    android:id="@+id/addressline3_dashb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bgdash"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="State"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7C7979" />
+
+                <EditText
+                    android:id="@+id/addresslinepin_dashb"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bgdash"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:hint="Pin code"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7C7979" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/statusbar" />
+
+            <LinearLayout
+                android:id="@+id/lineardashb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*Payment Details"
+                    android:textColor="@color/black" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/deliverycharges_layout"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp">
+
+                    <TextView
+                        android:id="@+id/rsdashb124"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs59"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.863"
+                        app:layout_constraintStart_toEndOf="@+id/textView19151"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView19151"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery charges"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_framecharges"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/rsdashb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.812"
+                        app:layout_constraintStart_toEndOf="@+id/textView191"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView191"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Frame Charges"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+
+                    <TextView
+                        android:id="@+id/framecharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toEndOf="@+id/rsdashb1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/selectedbudget_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/selectedbudget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.795"
+                        app:layout_constraintStart_toEndOf="@+id/framecharges211"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/framecharges211"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selected Budget"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+
+                    <TextView
+                        android:id="@+id/selectedbudgetpaydb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toEndOf="@+id/selectedbudget"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/totalpaymentlayout"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/rsdashb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.802"
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Payment"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+
+                    <TextView
+                        android:id="@+id/totalcharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.018"
+                        app:layout_constraintStart_toEndOf="@+id/rsdashb"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.516" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/errormsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="#E53935"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/textViewdashb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#1dbf72"
+                    android:letterSpacing="0.1"
+                    android:clickable="true"
+                    android:text="Place order"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/textViewdashb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                android:background="#178E1C"
+                android:letterSpacing="0.1"
+                android:clickable="true"
+                android:text="Place order"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
